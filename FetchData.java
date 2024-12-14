@@ -1,13 +1,33 @@
 public interface FetchData {
 
-	void fetchBus();
+	/**
+	 * 
+	 * @param params
+	 */
+	Bus fetchBus(String params);
 
-	void fetchRoute();
+	/**
+	 * 
+	 * @param params
+	 */
+	Route fetchRoute(String params);
 
-	void fetchTimeTable();
+	/**
+	 * 
+	 * @param params
+	 */
+	TimeTable fetchTimeTable(String params);
 
-	void fetchUser();
+	/**
+	 * 
+	 * @param params
+	 */
+	User createUser(String params);
 
-	void fetchTicket();
+	/**
+	 * 
+	 * @param params
+	 */
+	Ticket fetchTicket(String params);
 
 }

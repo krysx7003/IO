@@ -1,11 +1,13 @@
 import java.util.ArrayList;
+
 public class User {
 
 	private int ID;
 	private String name;
 	private String surname;
 	private Role role;
-	private ArrayList tickets = new ArrayList<Ticket>();
+	private ArrayList<Ticket> tickets;
+	private ArrayList<Fine> fines;
 
 	public int getID() {
 		// TODO - implement User.getID
@@ -57,16 +59,30 @@ public class User {
 		this.role = role;
 	}
 
-	public ArrayList getTickets() {
-		return this.tickets;
+	public Ticket getTickets() {
+		// TODO - implement User.getTickets
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * 
 	 * @param tickets
 	 */
-	public void setTickets(ArrayList tickets) {
-		this.tickets = tickets;
+	public void setTickets(Ticket tickets) {
+		// TODO - implement User.setTickets
+		throw new UnsupportedOperationException();
+	}
+
+	public ArrayList<Fine> getFines() {
+		return this.fines;
+	}
+
+	/**
+	 * 
+	 * @param fines
+	 */
+	public void setFines(ArrayList<Fine> fines) {
+		this.fines = fines;
 	}
 
 }

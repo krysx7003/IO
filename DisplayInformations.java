@@ -18,4 +18,6 @@ public interface DisplayInformations {
 
 	void showOptions();
 
+	void showFineList();
+
 }

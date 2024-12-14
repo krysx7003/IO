@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+
 public class Route {
 
 	private int ID;
-	private ArrayList busStops = new ArrayList<BusStop>();
+	private ArrayList<BusStop> busStops;
 	private int busID;
+	private boolean active = true;
 
 	public int getID() {
 		// TODO - implement Route.getID
@@ -19,16 +21,18 @@ public class Route {
 		throw new UnsupportedOperationException();
 	}
 
-	public ArrayList getBusStops() {
-		return this.busStops;
+	public BusStop getBusStops() {
+		// TODO - implement Route.getBusStops
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * 
 	 * @param busStops
 	 */
-	public void setBusStops(ArrayList busStops) {
-		this.busStops = busStops;
+	public void setBusStops(BusStop busStops) {
+		// TODO - implement Route.setBusStops
+		throw new UnsupportedOperationException();
 	}
 
 	public int getBusID() {
@@ -41,6 +45,32 @@ public class Route {
 	 */
 	public void setBusID(int busID) {
 		this.busID = busID;
+	}
+
+	public boolean getActive() {
+		return this.active;
+	}
+
+	/**
+	 * 
+	 * @param active
+	 */
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public void getAttribute() {
+		// TODO - implement Route.getAttribute
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param attribute
+	 */
+	public void setAttribute(int attribute) {
+		// TODO - implement Route.setAttribute
+		throw new UnsupportedOperationException();
 	}
 
 }

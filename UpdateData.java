@@ -1,87 +1,98 @@
 public interface UpdateData {
+    public void addBus(Bus bus);
+	/**
+	 * 
+	 * @param route
+	 */
+	public void addRoute(Route route);
 
 	/**
 	 * 
-	 * @param Bus
+	 * @param timeTable
 	 */
-	void addBus(int Bus);
+	public void addTimeTable(TimeTable timeTable);
 
 	/**
 	 * 
-	 * @param Route
+	 * @param user
 	 */
-	void addRoute(int Route);
-
-	/**
-	 * 
-	 * @param TimeTable
-	 */
-	void addTimeTable(int TimeTable);
-
-	/**
-	 * 
-	 * @param User
-	 */
-	void addUser(int User);
+	public void addUser(User user);
 
 	/**
 	 * 
 	 * @param UserID
 	 */
-	void addTicket(int UserID);
+	public void addTicket(int UserID);
 
 	/**
 	 * 
-	 * @param Bus
+	 * @param bus
 	 */
-	void updateBus(int Bus);
+	public void updateBus(Bus bus);
 
 	/**
 	 * 
-	 * @param Route
+	 * @param route
 	 */
-	void updateRoute(int Route);
+	public void updateRoute(Route route);
 
 	/**
 	 * 
-	 * @param TimeTable
+	 * @param timeTable
 	 */
-	void updateTimeTable(int TimeTable);
+	public void updateTimeTable(TimeTable timeTable);
 
 	/**
 	 * 
-	 * @param Driver
+	 * @param user
 	 */
-	void updateUser(int Driver);
+	public void updateUser(User user);
 
 	/**
 	 * 
-	 * @param BusID
+	 * @param busID
 	 */
-	void deleteBus(int BusID);
+	public void deleteBus(int busID);
 
 	/**
 	 * 
-	 * @param RouteID
+	 * @param routeID
 	 */
-	void deleteRoute(int RouteID);
+	public void deleteRoute(int routeID);
 
 	/**
 	 * 
-	 * @param LineID
+	 * @param lineID
 	 */
-	void deleteTimeTable(int LineID);
+	public void deleteTimeTable(int lineID);
 
 	/**
 	 * 
-	 * @param UserID
+	 * @param userID
 	 */
-	void deleteUser(int UserID);
+	public void deleteUser(int userID);
 
 	/**
 	 * 
-	 * @param TicketID
+	 * @param ticketID
 	 */
-	void deleteTicket(int TicketID);
+	public void deleteTicket(int ticketID);
 
+	/**
+	 * 
+	 * @param report
+	 */
+	public void addReport(String report);
+
+	/**
+	 * 
+	 * @param reportID
+	 */
+	public void updateReport(int reportID);
+
+	/**
+	 * 
+	 * @param reportID
+	 */
+	public void deleteReport(int reportID);
 }

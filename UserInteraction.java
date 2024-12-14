@@ -1,25 +1,53 @@
 public interface UserInteraction {
 
-	void checkTicket();
+	/**
+	 * 
+	 * @param user
+	 */
+	void checkTicket(User user);
 
 	void searchRoute();
 
 	/**
 	 * 
-	 * @param BusID
+	 * @param busID
 	 */
-	void searchRoute(int BusID);
+	void searchRoute(int busID);
 
 	void buyTicket();
 
-	void editTimeTable();
+	String editTimeTable();
 
 	/**
 	 * 
-	 * @param BusID
+	 * @param busID
 	 */
-	void editRoute(int BusID);
+	String editRoute(int busID);
 
-	void pickRoute();
+	void selectRoute();
+
+	/**
+	 * 
+	 * @param user
+	 * @param fineID
+	 */
+	void payFine(User user, int fineID);
+
+	/**
+	 * 
+	 * @param user
+	 * @param fine
+	 */
+	void generateFine(User user, Fine fine);
+
+	String editBus();
+
+	void trackLocation();
+
+	void trackRoute();
+
+	void checkLatancy();
+
+	void writeReport();
 
 }

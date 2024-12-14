@@ -39,4 +39,9 @@ public class Aplikacja implements DisplayInformations {
 		throw new UnsupportedOperationException();
 	}
 
+	public void showFineList() {
+		// TODO - implement Aplikacja.showFineList
+		throw new UnsupportedOperationException();
+	}
+
 }

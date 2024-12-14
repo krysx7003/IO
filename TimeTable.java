@@ -1,23 +1,9 @@
 import java.util.ArrayList;
+
 public class TimeTable {
 
-	private int ID;
 	private int lineID;
-	private ArrayList routeList = new ArrayList<Route>();
-
-	public int getID() {
-		// TODO - implement TimeTable.getID
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param ID
-	 */
-	public void setID(int ID) {
-		// TODO - implement TimeTable.setID
-		throw new UnsupportedOperationException();
-	}
+	private ArrayList<Route> tableRouteList;
 
 	public int getLineID() {
 		return this.lineID;
@@ -31,16 +17,18 @@ public class TimeTable {
 		this.lineID = lineID;
 	}
 
-	public ArrayList getRouteList() {
-		return this.routeList;
+	public Route getTableRouteList() {
+		// TODO - implement TimeTable.getTableRouteList
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * 
 	 * @param routeList
 	 */
-	public void setRouteList(ArrayList routeList) {
-		this.routeList = routeList;
+	public void setTableRouteList(Route routeList) {
+		// TODO - implement TimeTable.setTableRouteList
+		throw new UnsupportedOperationException();
 	}
 
 }
