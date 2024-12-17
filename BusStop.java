@@ -2,7 +2,6 @@ import java.time.LocalDateTime;
 
 public class BusStop {
 
-	private int ID;
 	private String name;
 	private int localization;
 	private LocalDateTime arrivalTime;
@@ -34,7 +33,8 @@ public class BusStop {
 	}
 
 	public int getLocalization() {
-		return this.localization;
+		// TODO - implement BusStop.getLocalization
+		throw new UnsupportedOperationException();
 	}
 
 	/**

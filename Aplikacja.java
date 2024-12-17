@@ -1,3 +1,6 @@
+/**
+ * sasaS
+ */
 public class Aplikacja implements DisplayInformations {
 
 	public void showTimeTable() {

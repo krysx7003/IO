@@ -45,4 +45,10 @@ public class Facade implements FetchData {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public boolean routeExists(String params) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'routeExists'");
+	}
+
 }

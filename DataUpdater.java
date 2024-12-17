@@ -38,9 +38,10 @@ public class DataUpdater implements UpdateData {
 
 	/**
 	 * 
-	 * @param UserID
+	 * @param userID
+	 * @param ticket
 	 */
-	public void addTicket(int UserID) {
+	public void addTicket(int userID, Ticket ticket) {
 		// TODO - implement DataUpdater.addTicket
 		throw new UnsupportedOperationException();
 	}
@@ -48,8 +49,9 @@ public class DataUpdater implements UpdateData {
 	/**
 	 * 
 	 * @param bus
+	 * @param busID
 	 */
-	public void updateBus(Bus bus) {
+	public void updateBus(Bus bus, int busID) {
 		// TODO - implement DataUpdater.updateBus
 		throw new UnsupportedOperationException();
 	}
@@ -57,8 +59,9 @@ public class DataUpdater implements UpdateData {
 	/**
 	 * 
 	 * @param route
+	 * @param routeID
 	 */
-	public void updateRoute(Route route) {
+	public void updateRoute(Route route, int routeID) {
 		// TODO - implement DataUpdater.updateRoute
 		throw new UnsupportedOperationException();
 	}
@@ -66,8 +69,9 @@ public class DataUpdater implements UpdateData {
 	/**
 	 * 
 	 * @param timeTable
+	 * @param lineID
 	 */
-	public void updateTimeTable(TimeTable timeTable) {
+	public void updateTimeTable(TimeTable timeTable, int lineID) {
 		// TODO - implement DataUpdater.updateTimeTable
 		throw new UnsupportedOperationException();
 	}
@@ -75,8 +79,9 @@ public class DataUpdater implements UpdateData {
 	/**
 	 * 
 	 * @param user
+	 * @param userID
 	 */
-	public void updateUser(User user) {
+	public void updateUser(User user, int userID) {
 		// TODO - implement DataUpdater.updateUser
 		throw new UnsupportedOperationException();
 	}
@@ -137,9 +142,10 @@ public class DataUpdater implements UpdateData {
 
 	/**
 	 * 
+	 * @param report
 	 * @param reportID
 	 */
-	public void updateReport(int reportID) {
+	public void updateReport(String report, int reportID) {
 		// TODO - implement DataUpdater.updateReport
 		throw new UnsupportedOperationException();
 	}

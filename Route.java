@@ -2,24 +2,9 @@ import java.util.ArrayList;
 
 public class Route {
 
-	private int ID;
 	private ArrayList<BusStop> busStops;
 	private int busID;
 	private boolean active = true;
-
-	public int getID() {
-		// TODO - implement Route.getID
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param ID
-	 */
-	public void setID(int ID) {
-		// TODO - implement Route.setID
-		throw new UnsupportedOperationException();
-	}
 
 	public BusStop getBusStops() {
 		// TODO - implement Route.getBusStops
@@ -70,6 +55,15 @@ public class Route {
 	 */
 	public void setAttribute(int attribute) {
 		// TODO - implement Route.setAttribute
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param list
+	 */
+	public void parseRoute(ArrayList<String> list) {
+		// TODO - implement Route.parseRoute
 		throw new UnsupportedOperationException();
 	}
 

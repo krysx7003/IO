@@ -2,26 +2,14 @@ import java.util.ArrayList;
 
 public class User {
 
-	private int ID;
 	private String name;
 	private String surname;
 	private Role role;
 	private ArrayList<Ticket> tickets;
 	private ArrayList<Fine> fines;
-
-	public int getID() {
-		// TODO - implement User.getID
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param ID
-	 */
-	public void setID(int ID) {
-		// TODO - implement User.setID
-		throw new UnsupportedOperationException();
-	}
+	private String login;
+	private int userID;
+	private int attribute;
 
 	public String getName() {
 		return this.name;
@@ -83,6 +71,43 @@ public class User {
 	 */
 	public void setFines(ArrayList<Fine> fines) {
 		this.fines = fines;
+	}
+
+	public String getLogin() {
+		return this.login;
+	}
+
+	/**
+	 * 
+	 * @param login
+	 */
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public int getUserID() {
+		return this.userID;
+	}
+
+	/**
+	 * 
+	 * @param userID
+	 */
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public void getAttribute() {
+		// TODO - implement User.getAttribute
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param attribute
+	 */
+	public void setAttribute(int attribute) {
+		this.attribute = attribute;
 	}
 
 }

@@ -30,4 +30,10 @@ public interface FetchData {
 	 */
 	Ticket fetchTicket(String params);
 
+	/**
+	 * 
+	 * @param params
+	 */
+	boolean routeExists(String params);
+
 }

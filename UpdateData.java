@@ -1,98 +1,111 @@
 public interface UpdateData {
-    public void addBus(Bus bus);
-	/**
-	 * 
-	 * @param route
-	 */
-	public void addRoute(Route route);
-
-	/**
-	 * 
-	 * @param timeTable
-	 */
-	public void addTimeTable(TimeTable timeTable);
-
-	/**
-	 * 
-	 * @param user
-	 */
-	public void addUser(User user);
-
-	/**
-	 * 
-	 * @param UserID
-	 */
-	public void addTicket(int UserID);
 
 	/**
 	 * 
 	 * @param bus
 	 */
-	public void updateBus(Bus bus);
+	void addBus(Bus bus);
 
 	/**
 	 * 
 	 * @param route
 	 */
-	public void updateRoute(Route route);
+	void addRoute(Route route);
 
 	/**
 	 * 
 	 * @param timeTable
 	 */
-	public void updateTimeTable(TimeTable timeTable);
+	void addTimeTable(TimeTable timeTable);
 
 	/**
 	 * 
 	 * @param user
 	 */
-	public void updateUser(User user);
+	void addUser(User user);
+
+	/**
+	 * 
+	 * @param userID
+	 * @param ticket
+	 */
+	void addTicket(int userID, Ticket ticket);
+
+	/**
+	 * 
+	 * @param bus
+	 * @param busID
+	 */
+	void updateBus(Bus bus, int busID);
+
+	/**
+	 * 
+	 * @param route
+	 * @param routeID
+	 */
+	void updateRoute(Route route, int routeID);
+
+	/**
+	 * 
+	 * @param timeTable
+	 * @param lineID
+	 */
+	void updateTimeTable(TimeTable timeTable, int lineID);
+
+	/**
+	 * 
+	 * @param user
+	 * @param userID
+	 */
+	void updateUser(User user, int userID);
 
 	/**
 	 * 
 	 * @param busID
 	 */
-	public void deleteBus(int busID);
+	void deleteBus(int busID);
 
 	/**
 	 * 
 	 * @param routeID
 	 */
-	public void deleteRoute(int routeID);
+	void deleteRoute(int routeID);
 
 	/**
 	 * 
 	 * @param lineID
 	 */
-	public void deleteTimeTable(int lineID);
+	void deleteTimeTable(int lineID);
 
 	/**
 	 * 
 	 * @param userID
 	 */
-	public void deleteUser(int userID);
+	void deleteUser(int userID);
 
 	/**
 	 * 
 	 * @param ticketID
 	 */
-	public void deleteTicket(int ticketID);
+	void deleteTicket(int ticketID);
 
 	/**
 	 * 
 	 * @param report
 	 */
-	public void addReport(String report);
+	void addReport(String report);
+
+	/**
+	 * 
+	 * @param report
+	 * @param reportID
+	 */
+	void updateReport(String report, int reportID);
 
 	/**
 	 * 
 	 * @param reportID
 	 */
-	public void updateReport(int reportID);
+	void deleteReport(int reportID);
 
-	/**
-	 * 
-	 * @param reportID
-	 */
-	public void deleteReport(int reportID);
 }

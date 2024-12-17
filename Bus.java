@@ -2,24 +2,9 @@ import java.util.ArrayList;
 
 public class Bus {
 
-	private int ID;
 	private int driverID;
 	private Route currentRoute;
 	private ArrayList<Route> busRouteList;
-
-	public int getID() {
-		// TODO - implement Bus.getID
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param ID
-	 */
-	public void setID(int ID) {
-		// TODO - implement Bus.setID
-		throw new UnsupportedOperationException();
-	}
 
 	public int getDriverID() {
 		return this.driverID;

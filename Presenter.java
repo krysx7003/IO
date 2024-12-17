@@ -1,5 +1,7 @@
 public class Presenter implements UserInteraction {
 
+	private User currentUser;
+
 	/**
 	 * 
 	 * @param user
@@ -23,7 +25,11 @@ public class Presenter implements UserInteraction {
 		throw new UnsupportedOperationException();
 	}
 
-	public void buyTicket() {
+	/**
+	 * 
+	 * @param ticket
+	 */
+	public void buyTicket(Ticket ticket) {
 		// TODO - implement Presenter.buyTicket
 		throw new UnsupportedOperationException();
 	}
@@ -35,9 +41,9 @@ public class Presenter implements UserInteraction {
 
 	/**
 	 * 
-	 * @param busID
+	 * @param data
 	 */
-	public String editRoute(int busID) {
+	public void editRoute(String data) {
 		// TODO - implement Presenter.editRoute
 		throw new UnsupportedOperationException();
 	}
@@ -99,6 +105,23 @@ public class Presenter implements UserInteraction {
 	public void checkLatancy() {
 		// TODO - implement Presenter.checkLatancy
 		throw new UnsupportedOperationException();
+	}
+
+	public void logIn() {
+		// TODO - implement Presenter.logIn
+		throw new UnsupportedOperationException();
+	}
+
+	public User getCurrentUser() {
+		return this.currentUser;
+	}
+
+	/**
+	 * 
+	 * @param currentUser
+	 */
+	public void setCurrentUser(User currentUser) {
+		this.currentUser = currentUser;
 	}
 
 }

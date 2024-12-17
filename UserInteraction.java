@@ -14,15 +14,19 @@ public interface UserInteraction {
 	 */
 	void searchRoute(int busID);
 
-	void buyTicket();
+	/**
+	 * 
+	 * @param ticket
+	 */
+	void buyTicket(Ticket ticket);
 
 	String editTimeTable();
 
 	/**
 	 * 
-	 * @param busID
+	 * @param data
 	 */
-	String editRoute(int busID);
+	void editRoute(String data);
 
 	void selectRoute();
 
@@ -49,5 +53,7 @@ public interface UserInteraction {
 	void checkLatancy();
 
 	void writeReport();
+
+	void logIn();
 
 }
