@@ -59,6 +59,7 @@ public class Presenter implements UserInteraction {
 				lineID = Integer.parseInt(dataArray.get(0));
 				dataArray.remove(0);
 				routeID = Integer.parseInt(dataArray.get(0));
+				dataArray.remove(0);
 				if(operation == "delete"){
 					dataUpdater.deleteRoute(routeID,lineID);
 					return;
