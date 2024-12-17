@@ -1,4 +1,6 @@
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BusStop {
 
@@ -56,6 +58,17 @@ public class BusStop {
 	 */
 	public void setArrivalTime(LocalDateTime arrivalTime) {
 		this.arrivalTime = arrivalTime;
+	}
+
+	/**
+	 *
+	 * @param data
+	 */
+	public void parseBusStop(String data) {
+		ArrayList<String> dataArray = new ArrayList<String>(Arrays.asList(data.split(",")));
+		this.name = dataArray.get(0);
+		this.localization = Integer.parseInt(dataArray.get(1));
+		this.arrivalTime = LocalDateTime.parse(dataArray.get(2));
 	}
 
 }

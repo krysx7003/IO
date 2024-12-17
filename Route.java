@@ -1,10 +1,13 @@
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Route {
 
 	private ArrayList<BusStop> busStops;
 	private int busID;
 	private boolean active = true;
+
 
 	public BusStop getBusStops() {
 		// TODO - implement Route.getBusStops
@@ -63,8 +66,15 @@ public class Route {
 	 * @param list
 	 */
 	public void parseRoute(ArrayList<String> list) {
-		// TODO - implement Route.parseRoute
-		throw new UnsupportedOperationException();
+		//operacja, lineID, routeID usuwamy wczesniej
+		// busID, actice, bus_stops(0), bus_Stops(1)...
+		this.busID = Integer.parseInt(list.get(0));
+		this.active = Boolean.parseBoolean(list.get(1));
+		for(int i = 2; i < list.size(); i++) {
+			BusStop busStop = new BusStop();
+			busStop.parseBusStop(list.get(i));
+			this.busStops.add(busStop);
+		}
 	}
 
 }
