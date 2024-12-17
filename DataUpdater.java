@@ -1,5 +1,5 @@
 public class DataUpdater implements UpdateData {
-
+	Data data = new Data();
 	/**
 	 * 
 	 * @param bus
@@ -13,9 +13,10 @@ public class DataUpdater implements UpdateData {
 	 * 
 	 * @param route
 	 */
-	public void addRoute(Route route) {
-		// TODO - implement DataUpdater.addRoute
-		throw new UnsupportedOperationException();
+	public void addRoute(Route route,int lineID) {
+		TimeTable timeTable = data.timeTableList.get(lineID);
+		timeTable.routeList.add(route);
+		data.timeTableList.set(lineID, timeTable);
 	}
 
 	/**
@@ -42,8 +43,7 @@ public class DataUpdater implements UpdateData {
 	 * @param ticket
 	 */
 	public void addTicket(int userID, Ticket ticket) {
-		// TODO - implement DataUpdater.addTicket
-		throw new UnsupportedOperationException();
+		data.userList.get(userID).tickets.add(ticket);
 	}
 
 	/**
@@ -61,9 +61,12 @@ public class DataUpdater implements UpdateData {
 	 * @param route
 	 * @param routeID
 	 */
-	public void updateRoute(Route route, int routeID) {
-		// TODO - implement DataUpdater.updateRoute
-		throw new UnsupportedOperationException();
+	public void updateRoute(Route route, int routeID,int lineID) {
+		TimeTable timeTable = data.timeTableList.get(lineID);
+		if(routeID<timeTable.routeList.size()){
+			timeTable.routeList.set(routeID,route);
+		}
+		data.timeTableList.set(lineID, timeTable);
 	}
 
 	/**
@@ -99,9 +102,12 @@ public class DataUpdater implements UpdateData {
 	 * 
 	 * @param routeID
 	 */
-	public void deleteRoute(int routeID) {
-		// TODO - implement DataUpdater.deleteRoute
-		throw new UnsupportedOperationException();
+	public void deleteRoute(int routeID,int lineID) {
+		TimeTable timeTable = data.timeTableList.get(lineID);
+		if(routeID<timeTable.routeList.size()){
+			timeTable.routeList.remove(routeID);
+		}
+		data.timeTableList.set(lineID, timeTable);
 	}
 
 	/**
