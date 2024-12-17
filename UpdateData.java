@@ -10,7 +10,7 @@ public interface UpdateData {
 	 * 
 	 * @param route
 	 */
-	void addRoute(Route route);
+	void addRoute(Route route,int lineID) ;
 
 	/**
 	 * 
@@ -43,7 +43,7 @@ public interface UpdateData {
 	 * @param route
 	 * @param routeID
 	 */
-	void updateRoute(Route route, int routeID);
+	void updateRoute(Route route, int routeID,int lineID);
 
 	/**
 	 * 
@@ -69,7 +69,7 @@ public interface UpdateData {
 	 * 
 	 * @param routeID
 	 */
-	void deleteRoute(int routeID);
+	void deleteRoute(int routeID,int lineID);
 
 	/**
 	 * 

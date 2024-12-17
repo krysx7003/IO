@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class TimeTable {
 
 	private int lineID;
-	private ArrayList<Route> tableRouteList;
+	ArrayList<Route> routeList;
 
 	public int getLineID() {
 		return this.lineID;
@@ -17,7 +17,7 @@ public class TimeTable {
 		this.lineID = lineID;
 	}
 
-	public Route getTableRouteList() {
+	public Route getRouteList() {
 		// TODO - implement TimeTable.getTableRouteList
 		throw new UnsupportedOperationException();
 	}
@@ -26,7 +26,7 @@ public class TimeTable {
 	 * 
 	 * @param routeList
 	 */
-	public void setTableRouteList(Route routeList) {
+	public void setRouteList(Route routeList) {
 		// TODO - implement TimeTable.setTableRouteList
 		throw new UnsupportedOperationException();
 	}

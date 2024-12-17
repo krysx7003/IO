@@ -5,8 +5,8 @@ public class User {
 	private String name;
 	private String surname;
 	private Role role;
-	private ArrayList<Ticket> tickets;
-	private ArrayList<Fine> fines;
+	ArrayList<Ticket> tickets;
+	ArrayList<Fine> fines;
 	private String login;
 	private int userID;
 	private int attribute;

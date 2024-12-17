@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Presenter implements UserInteraction {
 
 	private User currentUser;
+	private DataUpdater dataUpdater = new DataUpdater();
 
 	/**
 	 * 
@@ -30,8 +34,8 @@ public class Presenter implements UserInteraction {
 	 * @param ticket
 	 */
 	public void buyTicket(Ticket ticket) {
-		// TODO - implement Presenter.buyTicket
-		throw new UnsupportedOperationException();
+		int userID = currentUser.getUserID();
+		dataUpdater.addTicket(userID, ticket);
 	}
 
 	public String editTimeTable() {
@@ -44,8 +48,31 @@ public class Presenter implements UserInteraction {
 	 * @param data
 	 */
 	public void editRoute(String data) {
-		// TODO - implement Presenter.editRoute
-		throw new UnsupportedOperationException();
+		Role role = currentUser.getRole();
+		if(role == Role.ITemployee){
+			ArrayList<String> dataArray = new ArrayList<String>(Arrays.asList(data.split(","))); 
+			String operation;
+			int lineID,routeID;
+			if (dataArray.size() >= 2) {
+				operation = dataArray.get(0);
+				dataArray.remove(0);
+				lineID = Integer.parseInt(dataArray.get(0));
+				dataArray.remove(0);
+				routeID = Integer.parseInt(dataArray.get(0));
+				if(operation == "delete"){
+					dataUpdater.deleteRoute(routeID,lineID);
+					return;
+				}
+				Route route = new Route();
+				route.parseRoute(dataArray);
+				if(operation == "add"){
+					dataUpdater.addRoute(route,lineID);
+				}else if(operation == "change"){
+					dataUpdater.updateRoute(route,lineID,lineID);
+				}
+			}
+		}
+		//TODO - Kody błędu
 	}
 
 	public void selectRoute() {
