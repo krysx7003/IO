@@ -1,3 +1,4 @@
+package io_p1.src.main.java.io.projekt;
 import java.time.LocalDateTime;
 
 public class Fine {

@@ -1,3 +1,4 @@
+package io_p1.src.main.java.io.projekt;
 public class DataUpdater implements UpdateData {
 	Data data = new Data();
 	/**
