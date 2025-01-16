@@ -14,10 +14,11 @@ public class DataUpdater implements UpdateData {
 	 * 
 	 * @param route
 	 */
-	public void addRoute(Route route,int lineID) {
+	public int addRoute(Route route,int lineID) {
 		TimeTable timeTable = data.timeTableList.get(lineID);
 		timeTable.routeList.add(route);
 		data.timeTableList.set(lineID, timeTable);
+		return 1;
 	}
 
 	/**
@@ -62,12 +63,15 @@ public class DataUpdater implements UpdateData {
 	 * @param route
 	 * @param routeID
 	 */
-	public void updateRoute(Route route, int routeID,int lineID) {
+	public int updateRoute(Route route, int routeID,int lineID) {
 		TimeTable timeTable = data.timeTableList.get(lineID);
 		if(routeID<timeTable.routeList.size()){
 			timeTable.routeList.set(routeID,route);
+		}else{
+			return -1;
 		}
 		data.timeTableList.set(lineID, timeTable);
+		return 1;
 	}
 
 	/**
@@ -103,12 +107,15 @@ public class DataUpdater implements UpdateData {
 	 * 
 	 * @param routeID
 	 */
-	public void deleteRoute(int routeID,int lineID) {
+	public int deleteRoute(int routeID,int lineID) {
 		TimeTable timeTable = data.timeTableList.get(lineID);
 		if(routeID<timeTable.routeList.size()){
 			timeTable.routeList.remove(routeID);
+		}else{
+			return -1;
 		}
 		data.timeTableList.set(lineID, timeTable);
+		return 1;
 	}
 
 	/**
