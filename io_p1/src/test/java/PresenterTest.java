@@ -24,7 +24,6 @@ public void editRoute(String data) {
             }
         }
     }
-    //TODO - Kody błędu
 }
 
 
@@ -33,7 +32,9 @@ public class PresenterTest {
 
     @Test
     void testEditRoute(){
-        when(CurrentUser.getRole()).thenReturn(Role.ItEmployee);
+        when(currentUser.getRole).thenReturn(Role.ItEmployee);
+
+
 
         ArrayList<String> dataArray = new ArrayList<String>("")
 
