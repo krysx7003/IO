@@ -1,4 +1,4 @@
-package io_p1.src.main.java.io.projekt;
+package io.projekt;
 import java.util.ArrayList;
 
 public class TimeTable {
