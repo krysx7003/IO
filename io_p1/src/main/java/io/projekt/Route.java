@@ -4,14 +4,13 @@ import java.util.ArrayList;
 
 public class Route {
 
-	private ArrayList<BusStop> busStops;
+	private ArrayList<BusStop> busStops = new ArrayList<>();
 	private int busID;
-	private boolean active = true;
+	private boolean active;
 
 
-	public BusStop getBusStops() {
-		// TODO - implement Route.getBusStops
-		throw new UnsupportedOperationException();
+	public BusStop getBusStop(int i) {
+		return busStops.get(i);
 	}
 
 	/**
@@ -46,21 +45,6 @@ public class Route {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-
-	public void getAttribute() {
-		// TODO - implement Route.getAttribute
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param attribute
-	 */
-	public void setAttribute(int attribute) {
-		// TODO - implement Route.setAttribute
-		throw new UnsupportedOperationException();
-	}
-
 	/**
 	 * 
 	 * @param list
@@ -68,7 +52,14 @@ public class Route {
 	public void parseRoute(ArrayList<String> list) {
 		//operacja, lineID, routeID usuwamy wczesniej
 		// busID, actice, bus_stops(0), bus_Stops(1)...
-		this.busID = Integer.parseInt(list.get(0));
+		int id = Integer.parseInt(list.get(0));
+		if(id<=0){
+			throw new IllegalArgumentException();
+		}
+		this.busID = id;
+		if(list.get(1).isEmpty()){
+			throw new IllegalArgumentException();
+		}
 		this.active = Boolean.parseBoolean(list.get(1));
 		for(int i = 2; i < list.size(); i++) {
 			BusStop busStop = new BusStop();
