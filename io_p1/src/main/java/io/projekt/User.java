@@ -10,7 +10,6 @@ public class User {
 	ArrayList<Fine> fines;
 	private String login;
 	private int userID;
-	private int attribute;
 
 	public String getName() {
 		return this.name;
@@ -97,18 +96,4 @@ public class User {
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
-
-	public void getAttribute() {
-		// TODO - implement User.getAttribute
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param attribute
-	 */
-	public void setAttribute(int attribute) {
-		this.attribute = attribute;
-	}
-
 }

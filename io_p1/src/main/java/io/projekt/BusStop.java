@@ -9,20 +9,6 @@ public class BusStop {
 	private int localization;
 	private LocalDateTime arrivalTime;
 
-	public int getID() {
-		// TODO - implement BusStop.getID
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param ID
-	 */
-	public void setID(int ID) {
-		// TODO - implement BusStop.setID
-		throw new UnsupportedOperationException();
-	}
-
 	public String getName() {
 		return this.name;
 	}
@@ -36,8 +22,7 @@ public class BusStop {
 	}
 
 	public int getLocalization() {
-		// TODO - implement BusStop.getLocalization
-		throw new UnsupportedOperationException();
+		return this.localization;
 	}
 
 	/**
@@ -66,8 +51,12 @@ public class BusStop {
 	 * @param data
 	 */
 	public void parseBusStop(String data) {
-		ArrayList<String> dataArray = new ArrayList<String>(Arrays.asList(data.split(",")));
-		this.name = dataArray.get(0);
+		ArrayList<String> dataArray = new ArrayList<String>(Arrays.asList(data.split("/")));
+		String nam =dataArray.get(0);
+		if(nam.isEmpty()){
+			throw new IllegalArgumentException();
+		}
+		this.name = nam;
 		this.localization = Integer.parseInt(dataArray.get(1));
 		this.arrivalTime = LocalDateTime.parse(dataArray.get(2));
 	}
