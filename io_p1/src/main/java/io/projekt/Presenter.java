@@ -1,6 +1,7 @@
 package io.projekt;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Presenter implements UserInteraction {
 
@@ -61,15 +62,15 @@ public class Presenter implements UserInteraction {
 				dataArray.remove(0);
 				routeID = Integer.parseInt(dataArray.get(0));
 				dataArray.remove(0);
-				if(operation == "delete"){
+				if(Objects.equals(operation, "delete")){
 					dataUpdater.deleteRoute(routeID,lineID);
 					return;
 				}
 				Route route = new Route();
 				route.parseRoute(dataArray);
-				if(operation == "add"){
+				if(Objects.equals(operation, "add")){
 					dataUpdater.addRoute(route,lineID);
-				}else if(operation == "change"){
+				}else if(Objects.equals(operation, "change")){
 					dataUpdater.updateRoute(route,lineID,lineID);
 				}
 			}
