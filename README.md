@@ -12,5 +12,5 @@ Dokładne instrukcje dostępne są na stronie <http://pawel.gluchowski.staff.iia
 
 ## Obsługa
 
-    Projekt jest nie funkcjonalny. Celem zajęć było zaprojektowanie systemu nie jego impelmetacja. Jednakże można uruchomić testy 
-    jednostkowe dla kilku wybranych funkcji.
+Projekt jest nie funkcjonalny. Celem zajęć było zaprojektowanie systemu nie jego impelmetacja. Jednakże można uruchomić testy 
+jednostkowe dla kilku wybranych funkcji.
