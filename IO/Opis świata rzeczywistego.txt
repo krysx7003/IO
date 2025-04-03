@@ -1,0 +1,15 @@
+Opis zasobów ludzkich:
+Klient może sprawdzić gdzie znajduje sie jego autobus, kiedy przyjedzie na przystanek, jaki autobus zabierze go na wskazany przystanek ze wskazanego przystanku, jaką trasą będzie się przemieszczać. Pasażer może się zalogować i zakupić wybrany bilet. Pasażer może sprawdzić jakie autobusy przyjadą w najbliższym czasie na danym przystanku i o której godzinie korzystając z tablicy rozkladu. 
+Bileter sprawdza czy pasazer posiada bilet, kieorwca na ekranie w autobusie moze sprawdzic swoj rozklad jazdy w aktualnym kursie. Pracownik IT moz w bazie dodawac kursy, modyfikowac je, dodawać je kierowcom i autobusom. 
+
+Przepisy i strategie firmy: 
+Punktualność kierowców jest mierzona. Kierowcy wykraczający poza standardy są karani. 
+
+
+Dane techniczne - opis warstwy technicznego systemu informacyjnego: 
+a) lokalizacja: miasto w Polsce 
+b) aplikacja mobilna, strona internetowa 
+c) liczba użytkowników: 100 tys. (98 tysięcy pasażerów, 1 tysiąc kierowców, 400 bileterów, 600 pracowników IT) 
+d) dane o używanym sprzęcie i oprogramowaniu:
+Standardowy system operacyjny - Windows
+ 
